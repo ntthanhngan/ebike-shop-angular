@@ -1,0 +1,158 @@
+<!--header start-->
+<div class="header">
+
+    <div class="header-midle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="logo">
+                        <a routerLink="Home"><img src="../../assets/images/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm hidden-xs">
+                    <div class="call-us">
+                        <span><fa-icon [icon]="faPhone"></fa-icon></span> Call Us: +00965888546-32
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4  hidden-xs">
+                    <div class="top-email">
+                        <span>
+                            <fa-icon [icon]="faEnvelope"></fa-icon>
+                        </span> E-Mail: dotbike@gmail.com
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="header-middle-right">
+                        <div class="login-account">
+                            <a routerLink="/signin" routerLinkActive="active">
+                                <fa-icon [icon]="faUser" class="login-account"></fa-icon>
+                            </a>
+                        </div>
+                        <div class="login-account">
+                            <a routerLink="/wishlist" routerLinkActive="active">
+                                <fa-icon [icon]="faHeart" class="wishlist"></fa-icon>
+                            </a>
+                        </div>
+                        <div class="mini-cart">
+                            <a routerLink="/cart" class="cart-icon" routerLinkActive="active">
+                                <fa-icon [icon]="faShoppingBag" class="cart-icon"></fa-icon>
+                                <span>{{totalItemNumber}}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom sticky-header">
+        <div class="header-bottom-inner">
+            <div class="container mean-container">
+                <div class="row">
+                    <div class="mgeamenu-full-width">
+                        <div class="col-md-9 col-sm-6 col-xs-3">
+                            <div class="main-menu hidden-sm hidden-xs">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a class="home" routerLink="Home"><fa-icon [icon]="faHouse"></fa-icon></a>
+                                        </li>
+                                        <li class="mega_parent"><a routerLink="Product">Bikes & Frames</a>
+                                            <ul class="mega-menu">
+                                                <li><a class="title" href="shop.html">Clothing</a>
+                                                    <ul class="mega_submenu">
+                                                        <li>
+                                                            <a href="#">Bikes & Frames</a>
+                                                        </li>
+                                                        <li><a href="#"> Bikes Parts</a></li>
+                                                        <li><a href="#"> Tires & Tubes</a></li>
+                                                        <li><a href="#"> Shoes & Pedals</a></li>
+                                                        <li><a href="#"> Clothing</a></li>
+                                                        <li><a href="#"> Accessories</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="title" href="shop.html">BiCycle</a>
+                                                    <ul class="mega_submenu">
+                                                        <li><a href="#">Bikes & Frames</a></li>
+                                                        <li><a href="#"> Bikes Parts</a></li>
+                                                        <li><a href="#"> Tires & Tubes</a></li>
+                                                        <li><a href="#"> Shoes & Pedals</a></li>
+                                                        <li><a href="#"> Clothing</a></li>
+                                                        <li><a href="#"> Accessories</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a routerLink="#">Accessories</a></li>
+                                        <li><a routerLink="news">eBike News</a></li>
+
+                                        <li><a routerLink="contact">Contact</a></li>
+                                        <li><a routerLink="about-us">About us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-9">
+                            <div class="search-area">
+                                <div class="search-box-inner">
+                                    <form (ngSubmit)="onSubmit()">
+                                        <input type="text" placeholder="Search" [(ngModel)]="query" name="search">
+                                        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+                                    </form>
+                                    <table class="search-inner-area">
+                                        <thead class="title">
+                                            <th>Image</th>
+                                            <th>Title</th>
+                                            <th>Price</th>
+                                        </thead>
+                                        <cdk-virtual-scroll-viewport itemSize="60">
+                                            <tbody>
+                                                <ng-container>
+                                                    <dl>
+                                                        <tr class="body" *ngFor="let item of results">
+                                                            <td>
+                                                                <dd> <img [src]="item.thumbnail" alt=""></dd>
+                                                            </td>
+                                                            <td>
+                                                                <dd> {{item.name}}</dd>
+                                                            </td>
+                                                            <td>
+                                                                <dd>{{item.price | number: '4.0-1'}} VNĐ</dd>
+                                                            </td>
+                                                        </tr>
+                                                    </dl>
+                                                </ng-container>
+                                            </tbody>
+                                        </cdk-virtual-scroll-viewport>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu start -->
+            <div class="mobile-menu-area hidden-lg hidden-md">
+                <div class="container mean-container">
+                    <div class="col-md-12">
+                        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+                        <label for="openSidebarMenu" class="sidebarIconToggle">
+                            <div class="spinner diagonal part-1"></div>
+                            <div class="spinner horizontal"></div>
+                            <div class="spinner diagonal part-2"></div>
+                        </label>
+                        <div id="sidebarMenu">
+                            <div class="main-content-wrapper">
+                                <a href="#news">News</a>
+                                <a href="#contact">Contact</a>
+                                <a href="#about">About</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu end -->
+        </div>
+    </div>
+</div>
+
+<!--header end-->

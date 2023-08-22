@@ -1,0 +1,19 @@
+/*--------------------------
+  14. breadcrumbs-area css  
+----------------------------*/
+.breadcrumbs-area {
+    background: #ebebeb none repeat scroll 0 0;
+    height: 50px;
+    line-height: 50px;
+  }
+  .breadcrumbs-area li {
+    color: #666666;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .breadcrumbs-area li a {
+    color: #666666;
+  }
+  .breadcrumbs-area li a:hover {
+    color: #008dc7;
+  }

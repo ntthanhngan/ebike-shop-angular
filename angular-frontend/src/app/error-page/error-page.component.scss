@@ -1,0 +1,39 @@
+/*----------------------------
+   28. 404 page css here 
+-------------------------*/
+.error-content h2 {
+    color: #ff8f00;
+    font-family: "Lato",sans-serif;
+    font-size: 180px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-shadow: 7px 6px 0 #dadada, 0 -1px 0 #dadada, 1px -1px 0 #dadada, -1px 1px 0 #dadada, 1px 1px 0 #dadada;
+  }
+  .error-content > h3 {
+      color: #535353;
+      font-size: 55px;
+      font-weight: 500;
+      text-transform: capitalize;
+  }
+  .error-content h4 {
+      color: #535353;
+      font-weight: 400;
+      text-transform: capitalize;
+  }
+  .error-content .go-home {
+    background: #2ba8db none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 12px 28px;
+    text-transform: uppercase;
+  }
+  .error-content .go-home:hover {
+      background: #555 none repeat scroll 0 0;
+  }
+  .error-area {
+    padding: 80px 0;
+  }
+  

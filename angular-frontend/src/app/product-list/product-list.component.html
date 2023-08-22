@@ -1,0 +1,212 @@
+<!--shop-area start-->
+<div class="shop-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="price-slider-box">
+                    <div class="price-filter">
+                        <div class="price-slider-title">
+                            <h6>Min / Max Price</h6>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="price-slider-top">
+                                <div class="input-type">
+                                    <input type="text" id="min-price" />
+                                </div>
+                                <div class="input-type">
+                                    <input type="text" id="max-price" />
+                                </div>
+                            </div>
+                            <div id="price-slider" class="price-slider"></div>
+                        </form>
+                    </div><!-- /.price-filter -->
+                </div>
+                <div class="categoryies-option">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <li *ngFor="let cat of categories | async">
+                            <mat-checkbox color="primary">{{cat.name}}</mat-checkbox>
+                        </li>
+                    </ul>
+                </div>
+                <div class="categoryies-option">
+                    <h4>BRANDS</h4>
+                    <ul>
+                        <li>
+                            <input id="Not" type="checkbox" name="Not">
+                            <label for="Not">Not available <span> (7)</span></label>
+                        </li>
+                        <li>
+                            <input id="stock" type="checkbox" name="stock">
+                            <label for="stock">In stock <span> (30)</span></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                <div class="shop-item-filter">
+                    <div class="toolber-form left">
+                        <p class="filter-title">Sort by: </p>
+                        <div class="filter-form">
+                            <form action="#">
+                                <select>
+                                    <option value="Defauld">Default</option>
+                                    <option value="Newest">Newest items</option>
+                                    <option value="Trending">Trending items</option>
+                                    <option value="Best">Best sellers</option>
+                                    <option value="Price">Price: low to high</option>
+                                    <option value="Price">Price: high to high</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="toolber-form  middle">
+                        <p class="filter-title">Show: </p>
+                        <div class="filter-form show-form">
+                            <form action="#">
+                                <select>
+                                    <option value="">12</option>
+                                    <option value="">14</option>
+                                    <option value="">16</option>
+                                    <option value="">18</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <!--tab-list start-->
+                    <div class="shop-tab">
+                        <ul role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#grid-view" aria-controls="grid-view" role="tab" data-toggle="tab">
+                                    <fa-icon [icon]="faCaretDown"></fa-icon>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#list-view" aria-controls="list-view" role="tab" data-toggle="tab">
+                                    <i class="fa fa-th-list"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--tab-list end-->
+                </div>
+
+                <div class="row">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="grid-view"
+                            *ngFor="let product of products | async">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="single-product text-center">
+                                    <span class="price">off <br>30%</span>
+                                    <div class="single-product-inner">
+                                        <div class="product-img">
+                                            <a [routerLink]="['/productDetails/', product.id]"><img
+                                                    [src]="product.thumbnail" alt=""></a>
+                                        </div>
+                                        <div class="product-details">
+                                            <h3><a [routerLink]="['/productDetails/', product.id]">{{product.name}}</a>
+                                            </h3>
+                                            <div class="revew">
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                                            </div>
+                                            <div class="price-box">
+                                                <div class="new-price">
+                                                    <span>
+                                                        {{product.price | number: '4.0-1'}} VNĐ
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-hover">
+                                            <ul>
+                                                <li><button type="button" class="add-to-cart"
+                                                        (click)="addToCart(product)">
+                                                        Add to cart</button></li>
+                                                <li><button title="Add to Wishlist" href="#" class="add-to-cart">
+                                                        <fa-icon [icon]="faHeart"></fa-icon>
+                                                    </button>
+                                                </li>
+                                                <li><button title="Add to compare" href="#" class="add-to-cart">
+                                                        <fa-icon [icon]="faSignal"></fa-icon>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="list-view"
+                            *ngFor="let product of products | async let i = index">
+                            <div class="col-md-12 col-sm-12 col-xs-12 product-list">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="product-img">
+                                            <span class="price">off <br> 30%</span>
+                                            <a [routerLink]="['/productDetails/', product.id]">
+                                                <img [src]="product.thumbnail" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="product-details">
+                                            <h3>
+                                                <a [routerLink]="['/productDetails/', product.id]">{{product.name}}</a>
+                                            </h3>
+                                            <div class="product-review">
+                                                <div class="revew">
+                                                    <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                    <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                    <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                    <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                    <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                                                </div>
+                                                <div class="ratting-count">
+                                                    <p>15 Reviews</p>
+                                                </div>
+                                            </div>
+                                            <div class="price-box">
+                                                <div class="new-price">
+                                                    <span>{{product.price | number: '4.0-1'}} VNĐ</span>
+                                                </div>
+                                            </div>
+                                            <div class="producut-desc">
+                                                <p>{{product.description}}</p>
+                                            </div>
+                                            <div class="product-action-btn">
+                                                <ul>
+                                                    <li>
+                                                        <button type="button" class="add_cart"
+                                                            click="addToCart(product)">
+                                                            Add to cart</button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="Wishlist">
+                                                            <fa-icon [icon]="faHeart"></fa-icon>
+                                                            Add to Wishlist
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <mat-paginator [length]="totalItems" [pageSize]="pageSize">
+                                    <button>next</button>
+                                </mat-paginator>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--shop-area end-->

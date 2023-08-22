@@ -1,0 +1,109 @@
+/* ------------------------------------
+    37. My account page css here
+--------------------------------------*/
+.customer-login-area {
+    margin-bottom: 50px;
+}
+.my-account{
+	margin-top: 20px;
+}
+.form-fields {
+    border-bottom: none;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+    float: left;
+    padding: 20px 25px;
+    width: 100%;
+}
+.form-fields h2 {
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 18px;
+    margin: 0 0 15px;
+    padding: 0 0 5px;
+    text-transform: uppercase;
+}
+.form-fields label {
+	margin: 0 0 5px;
+	color: #000000;
+	font-weight: 400;
+}
+.form-row label span.required {
+    color: red;
+    font-weight: 700;
+    border: 0;
+	line-height: 2;
+	font-size: 14px;
+}
+.form-fields input {
+    background: #f0f0f0;
+    border: 0;
+    border-radius: 0;
+    height: 36px;
+    max-width: 100%;
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: 1;
+}
+.customer-register .form-action, 
+.customer-login .form-action{
+	background: #e0e0e0;
+    border-bottom: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-top: none;
+    float: left;
+    padding: 20px 10px 16px;
+    width: 100%;
+}
+.my-account p.lost_password {
+    float: left;
+    line-height: 20px;
+    margin: 10px 0 0 0;
+}
+.my-account label.inline {
+    float: right;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 10px 20px 0 0;
+}
+input#rememberme {
+    margin-right: 3px;
+    margin-top: 0;
+    position: relative;
+    top: 2px;
+}
+.my-account .actions-log {
+    float: right;
+}
+.actions-log input {
+  background: #2ba8db none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 38px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.actions-log input:hover{
+	background: #000;
+	-webkit-transition: .3s;
+	transition: .3s
+}
+.lost_password > a {
+  color: #666;
+}
+.lost_password > a:hover{color: #2ba8db }
+.mandatory-area.account-page {
+  padding-top: 70px;
+}
+.account-page .mandatory-menu {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,402 @@
+<!--slider-area start-->
+<div class="slider-container overlay">
+    <!-- Slider Image -->
+    <ngb-carousel *ngIf="slides" [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide *ngFor="let slide of slides">
+            <div id="mainSlider" class="slider-image">
+                <img [src]="slide" width="100%" />
+            </div>
+            <div class="carousel-caption slider-caption-1">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="slide1-text">
+                                <div class="middle-text">
+                                    <div class="title-1 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay="0.3s">
+                                        <h1>New <br> Collection</h1>
+                                    </div>
+                                    <div class="shop-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
+                                        <a href="shop.html">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+
+    <!-- Slider Caption 1 -->
+
+
+</div>
+<!--slider-area end-->
+<!--banner-area start-->
+<div class="benner-area section-pedding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Featured Sell</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="banner-list">
+                <owl-carousel-o [options]="customOptions_1">
+                    <ng-container *ngFor="let banner of bannerStore">
+                        <ng-template carouselSlide [(int)id]=banner.bn_id>
+                            <div class="col-md-6">
+                                <div class="sigle-banner">
+                                    <div class="banner-desc">
+                                        <div class="price">
+                                            <p>${{banner.bn_product_price}}.00</p>
+                                        </div>
+                                        <div class="banner-heading">
+                                            <h3>{{banner.bn_title}}</h3>
+                                            <p>{{banner.bn_content}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="banner-img">
+                                        <img src="{{banner.bn_img}}" alt="">
+                                        <div class="view-details">
+                                            <a href="{{banner.bn_product_url}}">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--banner-area end-->
+<!--new-product-area start-->
+<div class="new-product-area gray-bg section-pedding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title gray text-center">
+                    <h2>New Products</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <span class="price">off <br>30%</span>
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/1.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Classic-MR866</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="old-price"><span>$300.00</span></div>
+                                <div class="new-price"><span>$210.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <span class="price">off <br>20%</span>
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/2.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Express-MR868</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="old-price"><span>$300.00</span></div>
+                                <div class="new-price"><span>$260.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <span class="price">off <br>50%</span>
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/3.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Ladies-MR8O8</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="old-price"><span>$400.00</span></div>
+                                <div class="new-price"><span>$200.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <span class="price">off <br>70%</span>
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/4.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Classic-MR866</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="old-price"><span>$500.00</span></div>
+                                <div class="new-price"><span>$150.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/5.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Express-MR868</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="new-price"><span>$210.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/6.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Classic-MR868</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="new-price"><span>$350.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/7.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Modern-MR868</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="new-price"><span>$1100.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="single-product text-center">
+                    <div class="single-product-inner">
+                        <div class="product-img">
+                            <a href="single-product.html"><img src="img/product/8.png" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h3><a href="single-product.html">Dot Bike Ladies-MR868</a></h3>
+                            <div class="revew">
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                            </div>
+                            <div class="price-box">
+                                <div class="new-price"><span>$550.00</span></div>
+                            </div>
+                        </div>
+                        <div class="product-hover">
+                            <ul>
+                                <li>
+                                    <button type="button" class="add-to-cart" (click)="addToCart(products)">
+                                        Add to cart
+                                    </button>
+                                </li>
+                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="all-product text-center">
+                    <a routerLink="/product">See All Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--new-product-area end-->
+<!--accessories-area start-->
+<div class="accessories-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Accessories</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="accessories-list">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let accessory of accessoriesSlide">
+                        <ng-template carouselSlide [(int)id]=accessory.id>
+                            <div class="col-md-4">
+                                <div class="single-product text-center">
+                                    <span class="new">New</span>
+                                    <span class="price" *ngIf="accessory.old_price !== undefined">off <br>35%</span>
+                                    <div class="single-product-inner">
+                                        <div class="product-img">
+                                            <img [src]="accessory.img" alt="" class="custom-slide-img">
+                                        </div>
+                                        <div class="product-details">
+                                            <h3><a href="single-product.html">{{accessory.product_name}}</a></h3>
+                                            <div class="revew">
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStar"></fa-icon></a>
+                                                <a href="#"><fa-icon [icon]="faStarO"></fa-icon></a>
+                                            </div>
+                                            <div class="price-box">
+                                                <div class="old-price" *ngIf="accessory.old_price !== undefined">
+                                                    ${{accessory.old_price}}.00
+                                                </div>
+                                                <div class="new-price">
+                                                    <p>${{accessory.current_price}}.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-hover">
+                                            <ul>
+                                                <li><button type="button" class="add-to-cart">Add to cart</button></li>
+                                                <li><button title="Add to Wishlist" class="add-to-cart">
+                                                        <fa-icon [icon]="faHeart"></fa-icon></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+
+            </div>
+        </div>
+    </div>
+</div>

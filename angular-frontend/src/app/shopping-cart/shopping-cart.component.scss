@@ -1,0 +1,225 @@
+/*-------------------
+    22. Cart-Page css  
+---------------------*/
+table > thead > tr > th {
+    padding: 15px 37px;
+    text-align: center;
+    text-transform: uppercase;
+}
+table {
+    width: 100%;
+}
+.deco {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 5px;
+}
+.inco {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 7px 14px;
+  position: relative;
+  border-radius: 5px;
+}
+.qtybutton {
+  cursor: pointer;
+  position: relative;
+}
+.inco.qtybutton:before {
+    content: "";
+}
+.inco.qtybutton:before, .deco.qtybutton:before {
+  background: #ffffff none repeat scroll 0 0;
+  display: inline-block;
+  font-family: FontAwesome;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.deco.qtybutton:before {
+    content: "\f068 ";
+}
+table tbody tr td {
+    text-align: center;
+}
+table tbody tr td {
+  padding: 15px 0;
+  text-align: center;
+}
+.cart-product {
+  >a{
+  background: #fff none repeat scroll 0 0;
+  display: block;
+  padding: 12px 0;
+  }
+  img{
+    width: 50%;
+  }
+}
+.cart-name h3 {
+    font-size: 17px;
+}
+.cart-name .revew > span {
+  font-family: "Lato",sans-serif;
+}
+.cart-plus-minus-box {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 7px;
+  text-align: center;
+  width: 41px;
+  font-family: "Lato",sans-serif;
+}
+.price-cart ,.total-cart-price{
+  font-family: "Lato",sans-serif;
+}
+.cart-name h3 a {
+  color: #1b222a;
+}
+.cart-name h3 a:hover {
+  color: #f4a137;
+}
+.cart-remove > button .fa-icon:hover {
+  border: none;
+  color: white;
+}
+.cart-remove button {
+  font-size: 1.7rem;
+    background-color: #ff8f00 ;
+    border: none;
+    border-radius: 3px;
+}
+.update-cart-btn {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #dddddd;
+  display: inline-block;
+  height: 365px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.update-cart-btn-inner a:hover {
+  background: #000 none repeat scroll 0 0;
+  color: #fff;
+}
+.update-cart-btn-inner {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+}
+.apply-coupon > input {
+  background: #ebebeb none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 25px;
+  color: #060606;
+  padding: 12px 15px;
+  position: relative;
+  width: 100%;
+}
+.apply-coupon > button {
+  background: #008dc7;
+  border: medium none;
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 13px 30px;
+  position: absolute;
+  right: 47px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.apply-coupon > button:hover{
+    background: #000;
+}
+.offer-coupon {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #dddddd;
+  padding: 114px 30px;
+}
+.offer-titel h4 {
+  border-bottom: 1px solid #e1e1e1;
+  color: #000000;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.offer-titel > p {
+  color: #5c5c5c;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.cart-total.cart-pdi {
+  flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  padding: 30px 13rem;
+  margin-bottom: 20px;
+}
+.proceed-out > a,.update-cart-btn-inner a {
+  background: #008dc7 none repeat scroll 0 0;
+  border-radius: 25px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 800;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 44px;
+  padding: 0 18px;
+  font-family: "Lato",sans-serif;
+}
+.proceed-out > a:hover {
+  background: #000;
+}
+
+.cart-cont, .cart-price{
+  text-align: end;
+}
+
+.cart-cont{
+  padding-right: 30px;
+}
+
+.empty-cart{
+  min-height: 100vh;
+  text-align: center;
+  img{
+    width: 50%;
+    height: 60%;
+  }
+  h1{
+    font-size: 3rem;
+    span{
+      color: rgb(238, 27, 27);
+    }
+  }
+  p{
+    color: rgb(177, 175, 175);
+  }
+  button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 3rem;
+    color: white;
+    background-color: #008dc7;
+    font-weight: bold ;
+  }
+  button:hover{
+      background-color: #10b4f5;
+    }
+}

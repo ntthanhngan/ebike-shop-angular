@@ -1,0 +1,187 @@
+/*------------------------
+   23. checkout-area css  
+------------------------*/
+.billing-details-area {
+    padding-left: 30px;
+    padding-top: 36px;
+  }
+  .checkout-titel {
+    color: #1b222a;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 43px;
+    padding-bottom: 7px;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .checkout-titel:after {
+    background: #636363 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 65px;
+  }
+  .input-text > input {
+    border: 1px solid #ededed;
+    color: #1b222a;
+    font-weight: 600;
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .input-field .input-text {
+      float: left;
+      width: 50%;
+  }
+  .billing-input {
+    overflow: hidden;
+  }
+  .input-field .input-text:first-child {
+      padding-right: 15px;
+  }
+  .input-field .input-text:last-child {
+      padding-left: 15px;
+  }
+  .your-order-area {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ededed;
+    margin-bottom: 98px;
+    margin-top: 15px;
+    padding: 23px 23px 23px 45px;
+  }
+  .cart_total > h4 {
+    color: #000000;
+    font-family: "Lato",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+  }
+  .cart-inner {
+    border-bottom: 1px solid #949494;
+    border-top: 1px solid #949494;
+    padding: 22px 0;
+  }
+  .cart_total {
+    width: 318px;
+    font-family: "Lato",sans-serif;
+  }
+  .cart-inner li {
+    color: #008dc7;
+    font-family: "Lato",sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .cart-inner li:last-child {
+    margin-bottom: 0px;
+  }
+  .cart-inner li span {
+    float: right;
+  }
+  .cart_total > p {
+    color: #1b222a;
+    font-family: "Lato",sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 18px;
+    text-transform: uppercase;
+  }
+  .cart_total > p span {
+      float: right;
+  }
+  .accordion-description > img {
+    margin: 15px 0 20px;
+  }
+  .continue-btn > a {
+    background: #008dc7 none repeat scroll 0 0;
+    border-radius: 25px;
+    color: #fff;
+    display: inline-block;
+    // float: left;
+    font-size: 18px;
+    font-weight: 800;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 36px;
+    padding: 0 40px;
+    text-transform: capitalize;
+  }
+  .continue-btn > a:hover,.place-order > a:hover{
+    background: #000;
+  }
+  .shipping-different-check {
+      margin-right: 5px;
+  }
+  .shipping-different-check, .shipping-diffrent-text, .shipping-diffrent-text, .shipping-different{
+      display: inline-block;
+  }
+  .shipping-diffrent-text > p {
+    margin: 0;
+  }
+  .shipping-different {
+    margin-top: 10px;
+  }
+  .billing-submit {
+    margin-bottom: 56px;
+    overflow: hidden;
+  }
+  .payment-method h4 a {
+    color: #313335;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .payment-method h4 {
+    margin-bottom: 14px;
+    position: relative;
+    padding:  0 24px;
+  }
+  .accordion-active > h4:after {
+    border: 2px solid #898989;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 14px;
+  }
+  .accordion-description > p {
+    color: #313335;
+    margin-bottom: 24px;
+  }
+  .accordion-active > h4.open:after {
+      background: #008dc7 none repeat scroll 0 0;
+      border: medium none;
+  }
+  .payment-method {
+    padding: 60px 0 16px;
+  }
+  .payment-checkbox {
+    font-family: "Lato",sans-serif;
+    font-size: 13px;
+    margin-bottom: 40px;
+    padding-top: 11px;
+    text-transform: uppercase;
+  }
+  .payment-checkbox input {
+      margin-right: 8px;
+  }
+  .place-order > a {
+    background: #008dc7 none repeat scroll 0 0;
+    border-radius: 25px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 28px;
+    margin-bottom: 30px;
+  }
+  

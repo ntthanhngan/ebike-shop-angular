@@ -1,0 +1,107 @@
+/*--------------------
+    24. contact css  
+----------------------*/
+.contact-area {
+    background: #f7f7f7 none repeat scroll 0 0;
+    padding: 57px 0;
+  }
+  .contact-message > h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+  }
+  .single-input > input {
+    background: #ebebeb none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 25px;
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 0 15px;
+    text-transform: capitalize;
+    width: 270px;
+    color: #1b222a;
+  }
+  .single-input.input-pd input {
+    margin-right: 0;
+  }
+  .contact-message textarea {
+    background: #ebebeb none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 25px;
+    height: 178px;
+    padding: 13px 14px;
+    width: 100%;
+    resize: none;
+  }
+  .service-icon {
+      float: left;
+  }
+  .service-cont {
+      display: inline-block;
+  }
+  .service-cont h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .service-icon i {
+    color: #898c90;
+    font-size: 50px;
+    margin-right: 47px;
+    margin-top: 9px;
+  }
+  .single-service {
+    border-bottom: 1px solid #ddd;
+    padding: 22px 0;
+  }
+  .single-service:last-child {
+    border: medium none;
+    padding-bottom: 0;
+  }
+  .ser-contct > p {
+    font-family: "Lato",sans-serif;
+  }
+  .service-cont > p {
+    margin-bottom: 0;
+  }
+  .map-area {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+  .send-button > button {
+    background: #008dc7 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 30px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 45px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .send-button {
+      margin-top: 20px;
+      text-align: right;
+  }
+  .send-button > button:hover {
+      background: #000000 none repeat scroll 0 0;
+  }
+  .form-messege.error {
+    color: red;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  .form-messege.success {
+    color: #6bc513;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+  

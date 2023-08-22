@@ -1,0 +1,126 @@
+/*-----------------------
+	10.footer css 
+-------------------------*/
+.brand-area{
+    padding: 100px 0;
+}
+.footer-top {
+  background: #2ba8db none repeat scroll 0 0;
+  color: #fff;
+  padding: 30px 0 39px;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.single-footer > p.dec {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.single-footer > p {
+  margin-bottom: 33px;
+}
+.social-icon > a {
+  background: #000 none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  width: 43px;
+  margin-right: 8px;
+}
+.social-icon > a:hover {
+  background: #fff;
+  color: #2BA8DB;
+}
+.footer-top .col-md-2 {
+  padding-left: 0;
+}
+.single-footer.footer-dec {
+  margin-top: 0;
+}
+.single-footer {
+  margin-top: 30px;
+  padding-left: 15px;
+  position: relative;
+}
+.footer-title h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 14px;
+  margin-bottom: 34px;
+  text-transform: uppercase;
+}
+.single-footer ul.mainmenu li a {
+  color: #fff;
+  display: block;
+  line-height: 14px;
+  padding: 15px 0;
+}
+.single-footer ul.mainmenu li a:hover {
+  color: #ff8f00;
+}
+.single-footer ul.mainmenu li:first-child a {
+  padding-top: 0;
+}
+.single-footer.newsletter input {
+  border: medium none;
+  border-radius: 25px;
+  color: #1b222a;
+  height: 39px;
+  line-height: 39px;
+  margin-bottom: 19px;
+  padding: 0 18px;
+  width: 100%;
+}
+.single-footer.newsletter > p {
+  margin-bottom: 19px;
+}
+.single-footer:before {
+    background: #55b9e2;
+    content: "";
+    height: 341px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.footer-top .row .col-md-5 .single-footer:before {
+    display: none;
+}
+.footer-top .row .col-md-5 .single-footer {
+    padding: 0;
+}
+.single-footer.newsletter button {
+  background: #1b222a none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 15px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.single-footer.newsletter button:hover {
+  background: #fff;
+  color: #2BA8DB;
+}
+.footer-botton p {
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 6px;
+}
+.footer-botton p a {
+  color: #2ba8db;
+}
+.master-card img {
+  float: right;
+}
+.footer-botton {
+  background: #1b222a none repeat scroll 0 0;
+  padding: 15px 0;
+}

@@ -1,0 +1,98 @@
+<!--cart-page-area start-->
+<div class="cart-page-area page-bg page-ptb">
+    <div class="container">
+        <ng-container *ngIf="products.length!=0">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="table-responsive">
+                        <table class="table-content">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>image</th>
+                                    <th>name</th>
+                                    <th>quantity</th>
+                                    <th>price</th>
+                                    <th>total price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of products, let i = index">
+                                    <td>{{i+1}}</td>
+                                    <td class="cart-product">
+                                        <a href="#">
+                                            <img [src]="item.thumbnail" alt="">
+                                        </a>
+                                    </td>
+                                    <td class="cart-name">
+                                        <h3><a href="#">{{item.name}}</a></h3>
+                                    </td>
+                                    <td>
+                                        <div class="cart-quantity">
+                                            <form action="#" method="POST">
+                                                <div class="product-quantity">
+                                                    <div class="cart-quantity">
+                                                        <div class="cart-plus-minus">
+                                                            <div class="deco qtybutton">-</div>
+                                                            <input type="text" [value]="1" name="qtybutton"
+                                                                class="cart-plus-minus-box">
+                                                            <div class="inco qtybutton">+</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                    <td class="price-cart">{{item.price | number: '4.0-1'}} VND</td>
+                                    <td class="total-cart-price">{{item.price*1 | number: '4.0-1'}} VND</td>
+                                    <td class="cart-remove">
+                                        <button (click)="removeProduct(item)">
+                                            <fa-icon [icon]="faTrash" class="fa-icon"></fa-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="cart-total cart-pdi">
+                        <div class="cart-inner">
+                            <tbody>
+                                <tr>
+                                    <td class="cart-cont"><strong>Subtotal:</strong></td>
+                                    <td class="cart-price">{{productList | number: '4.0-1'}} VND</td>
+                                </tr>
+                                <tr>
+                                    <td class="cart-cont"><strong>Shipping cost:</strong></td>
+                                    <td class="cart-price">+ 30.000 VND</td>
+                                </tr>
+                                <tr>
+                                    <td class="cart-cont"><strong>Total:</strong></td>
+                                    <td class="cart-price">{{productList + 30000 | number: '4.0-1'}} VND</td>
+                                </tr>
+                            </tbody>
+                        </div>
+                        <div class="proceed-out">
+                            <a href="#">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="products.length==0">
+            <div class="row">
+                <div class="empty-cart">
+                    <img src="../../assets/images/empty-cart.png" alt="">
+                    <h1>Your Cart is <span>Empty</span></h1>
+                    <p>Must add item to cart before you procceed to check out</p>
+                    <button routerLink="/Product">Return to Shop</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<!--cart-page-area end-->
